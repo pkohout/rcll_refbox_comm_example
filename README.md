@@ -6,5 +6,13 @@ The other packages are requirements to be able to communicate. This was only tes
 Protobuf and openssl need to be installed on your system
 
 # Installation
+1. Add https://git.ist.tugraz.at/ais/utils to your catkin_ws/src
+2. Copy the packages to your catkin_ws/src folder. After running catkin_make everything should build.
 
-Copy the packages to your catkin_ws/src folder. After running catkin_make everything should build.
+# Next steps
+
+Several suggestions for next steps:
+ 1. Implement awareness of game state (e.g. is the game paused the robot should not move or do tasks)
+ 2. Depending on the game state some protobuf messages were not registered with the message register. In this case you will see an error in the console, look up the comp_id and msg_type in the error message and register the corresponding message.
+ 3. Implement sending prepare machine instruction (e.g. send a prepare machine instruction such that the BS dispenses a product to the output: look at refbox_msgs/msg/MachineInstruction.proto)
+ 4. Implement a way to reset machines if they go into broken state
