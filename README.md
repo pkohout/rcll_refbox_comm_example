@@ -6,7 +6,9 @@ The other packages are requirements to be able to communicate. This was only tes
 Protobuf and openssl need to be installed on your system
 
 # Installation
-1. Add https://git.ist.tugraz.at/ais/utils to your catkin_ws/src
+1. Add https://git.ist.tugraz.at/ais/utils to your `catkin_ws/src`. If there are problems with the build simply remove all folders except for `tug-protobuf` as you will only need that util.  
+`sudo apt-get update && sudo apt-get -y install protobuf-compiler protobuf-c-compiler ros-noetic-roslint  python3-yaml  libprotoc-dev`
+
 2. Copy the packages to your catkin_ws/src folder. After running catkin_make everything should build.
 
 # Next steps
